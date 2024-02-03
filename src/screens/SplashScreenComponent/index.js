@@ -33,13 +33,13 @@ const SplashScreenComponent = () => {
             style={{
               width: '70%',
               alignItem: 'center',
-              marginLeft: 40,
+              marginLeft: 10,
               color: 'white',
               marginTop:'106%',
             }}>
             <Image source={require('../../Images/ShipScreenLogo.png')}></Image>
 
-            <View style={{marginTop: 20}}>
+            <View style={{marginTop: 20, marginLeft:15}}>
               <Text style={{color: '#D5F9F4', width:'122%'}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
@@ -56,7 +56,7 @@ const SplashScreenComponent = () => {
                 <Text style={{color: 'white'}}>Get Started</Text>
 
                 <Image
-                  style={{marginTop: 9}}
+                  style={{marginTop: 7}}
                   source={require('../../Images/Line3.png')}></Image>
               </View>
             </View>
