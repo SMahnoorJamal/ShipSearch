@@ -1,50 +1,27 @@
-// import React, { useEffect, useState } from 'react';
-// import { View, StyleSheet, Text } from 'react-native';
-// import MapView, { Marker } from 'react-native-maps';
-// // import axios from 'axios';
+import React from 'react';
+import { View } from 'react-native';
+import MapView, { Marker } from 'react-native-maps';
 
-// const CargoScreen = () => {
-//   const [countries, setCountries] = useState([]);
+const CargoScreen = () => {
+  return (
+    <View style={{ flex: 1 }}>
+      <MapView
+        style={{ flex: 1 }}
+        initialRegion={{
+          latitude: 37.78825, // Replace with your desired latitude
+          longitude: -122.4324, // Replace with your desired longitude
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+      >
+        <Marker
+          coordinate={{ latitude: 37.78825, longitude: -122.4324 }} // Replace with marker coordinates
+          title="Marker Title"
+          description="Marker Description"
+        />
+      </MapView>
+    </View>
+  );
+};
 
-//   useEffect(() => {
-//     // Fetch country data from the REST Countries API
-//     const fetchCountryData = async () => {
-//       try {
-//         const response = await axios.get('https://restcountries.com/v3.1/all');
-//         setCountries(response.data);
-//       } catch (error) {
-//         console.error('Error fetching country data:', error);
-//       }
-//     };
-
-//     fetchCountryData();
-//   }, []);
-
-//   return (
-//     <View style={styles.container}>
-//       <MapView style={styles.map}>
-//         {countries.map((country, index) => (
-//           <Marker
-//             key={index}
-//             coordinate={{
-//               latitude: country.latlng[0],
-//               longitude: country.latlng[1],
-//             }}
-//             title={country.name.common}
-//           />
-//         ))}
-//       </MapView>
-//     </View>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//   },
-//   map: {
-//     flex: 1,
-//   },
-// });
-
-// export default CargoScreen;
+export default CargoScreen;
